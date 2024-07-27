@@ -1,0 +1,107 @@
+\documentclass[oneside,senior,etd]{BYUPhysForDegree}
+
+\usepackage[utf8]{inputenc}
+\usepackage{rotating} 
+
+\usepackage[russian]{babel}
+\usepackage{amsfonts} % Пакеты для математических символов и теорем
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx} % Пакеты для вставки графики
+\usepackage{subfig}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[unicode]{hyperref}
+\usepackage[nottoc]{tocbibind} % Для того, чтобы список литературы отображался в оглавлении
+\usepackage{algorithmic} % Для записи алгоритмов в псевдокоде
+\usepackage{algorithm}
+\usepackage{verbatim} % Для вставок заранее подготовленного текста в режиме as-is
+\usepackage{listings}
+\usepackage[utf8x]{inputenc}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{customc}{
+  basicstyle=\footnotesize,
+  numberstyle=\tiny\color{black},
+  keywordstyle=\color{blue},
+  identifierstyle=\color{codepurple},
+  stringstyle=\color{orange},
+  backgroundcolor=\color{backcolour},   
+  commentstyle=\color{codegreen},                 
+  numbers=left,       
+  numbersep=5pt,                             
+  showstringspaces=false,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=true,     
+  extendedchars=\true,
+  inputencoding=utf8,
+}
+\lstset { style=customc }
+
+\usepackage{commath}
+\newcommand\Tau{\mathcal{T}}
+\newcommand{\R}{\mathbb{R}}
+\usepackage{color}
+\usepackage[colorinlistoftodos, prependcaption]{todonotes}
+\usepackage{multirow}
+\newcommand*{\MyIndent}{\hspace*{0.2cm}}%
+
+\Chair{Кафедра Суперкомпьютеров и Квантовой Информатики}
+\Lab{~}
+\Year{2024}
+  \Month{Май}
+  \City{Москва}
+  \AuthorText{Автор}
+  \Author{Панкина Алина Алексеевна}
+  \TitleTop{Исследование методов обучения}
+  %\TitleMiddle{}
+  \TitleBottom{представлению данных} % leave empty if you don't need it
+  \TitleBottomEng{} % leave empty if you don't need it  
+  \docname{Курсовая работа}
+  \Advisor{Буряк Дмитрий Юрьевич}  
+  \AdvisorDegree{к.ф.-м.н.}
+  
+\Abstract
+{
+С каждым днем растёт потребность в регулярном использовании различных методов машинного обучения для решения практических задач. В следствие чего зачастую возникают проблемы при обработке больших объемов данных высоких размеров, связанные не только с большой вычислительной нагрузкой, но также и с невысоким качеством работы алгоритмов. 
+
+Для предотвращения данных проблем необходимо уметь понижать размерность данных, сохраняя их информативность. Для этой задачи используются методы обучения представлению данных. Работа посвящена разбору и анализу существующих методов.
+}
+
+
+%%%% DON'T change this. It is here because .sty does not support cyrillic cp properly %%%%
+\University{Московский государственный университет имени М.В.Ломоносова}
+\Faculty{Факультет вычислительной математики и кибернетики}
+\GrText{гр.}
+\AdvisorText{Научный руководитель}
+\AbstractText{Аннотация}
+
+\begin{document}
+\fixmargins
+\makepreliminarypages
+
+\oneandhalfspace
+
+\tableofcontents
+
+\include{Chapter0} % Введение
+\include{Chapter1} % Обзор существующих подходов
+\include{Chapter2} % Обзор методов извлечения признаков
+\include{Chapter3} % Постановка задачи
+\include{Chapter4} % Предложенный подход
+\include{Chapter5} % Программная реализация
+\include{Chapter6} % Результаты тестирования
+\include{Chapter7} % Заключение
+
+\nocite{*}
+\bibliographystyle{gost71u} % Для соответствия требованиям об оформлении списка литературы
+\bibliography{references}
+
+% \include{Appendix} 
+
+\end{document}
